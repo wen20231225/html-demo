@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上传简历 - Resume Upload</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧内容区域 -->
+        <div class="left-section">
+            <div class="text-content">
+                <h1>Finish!</h1>
+                <h2>Upload Your Resume</h2>
+                <p>Upload your resume, the platform will help you parse and optimize, you can also skip this step</p>
+            </div>
+            
+            <!-- 左侧插图 -->
+            <div class="illustration">
+                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                    <!-- 背景装饰元素 -->
+                    <circle cx="350" cy="50" r="30" fill="#e8f4fd" opacity="0.6"/>
+                    <circle cx="320" cy="80" r="15" fill="#e8f4fd" opacity="0.4"/>
+                    
+                    <!-- 主要的蓝色角色 -->
+                    <g transform="translate(30, 100)">
+                        <!-- 身体 -->
+                        <ellipse cx="50" cy="120" rx="45" ry="60" fill="#4285f4"/>
+                        
+                        <!-- 头部 -->
+                        <circle cx="50" cy="40" r="35" fill="#4285f4"/>
+                        
+                        <!-- 眼睛 -->
+                        <circle cx="40" cy="35" r="4" fill="white"/>
+                        <circle cx="60" cy="35" r="4" fill="white"/>
+                        <circle cx="41" cy="35" r="2" fill="black"/>
+                        <circle cx="61" cy="35" r="2" fill="black"/>
+                        
+                        <!-- 手臂 -->
+                        <ellipse cx="20" cy="90" rx="15" ry="40" fill="#4285f4" transform="rotate(-20 20 90)"/>
+                        <ellipse cx="80" cy="90" rx="15" ry="40" fill="#4285f4" transform="rotate(20 80 90)"/>
+                        
+                        <!-- 脚 -->
+                        <ellipse cx="30" cy="180" rx="12" ry="20" fill="#4285f4"/>
+                        <ellipse cx="70" cy="180" rx="12" ry="20" fill="#4285f4"/>
+                    </g>
+                    
+                    <!-- 文档/简历图标 -->
+                    <g transform="translate(150, 80)">
+                        <!-- 主文档 -->
+                        <rect x="0" y="0" width="120" height="160" rx="8" fill="white" stroke="#e0e0e0" stroke-width="2"/>
+                        
+                        <!-- 文档内容线条 -->
+                        <line x1="15" y1="25" x2="105" y2="25" stroke="#4285f4" stroke-width="3"/>
+                        <line x1="15" y1="45" x2="85" y2="45" stroke="#e0e0e0" stroke-width="2"/>
+                        <line x1="15" y1="60" x2="95" y2="60" stroke="#e0e0e0" stroke-width="2"/>
+                        <line x1="15" y1="75" x2="75" y2="75" stroke="#e0e0e0" stroke-width="2"/>
+                        
+                        <!-- 圆形装饰 -->
+                        <circle cx="20" cy="100" r="3" fill="#4285f4"/>
+                        <circle cx="35" cy="100" r="3" fill="#87ceeb"/>
+                        <circle cx="50" cy="100" r="3" fill="#90ee90"/>
+                        <circle cx="65" cy="100" r="3" fill="#dda0dd"/>
+                        
+                        <!-- 更多内容线条 -->
+                        <line x1="15" y1="125" x2="90" y2="125" stroke="#e0e0e0" stroke-width="2"/>
+                        <line x1="15" y1="140" x2="80" y2="140" stroke="#e0e0e0" stroke-width="2"/>
+                    </g>
+                    
+                    <!-- 连接线和数据流 -->
+                    <g transform="translate(280, 120)">
+                        <!-- 连接管道 -->
+                        <rect x="0" y="0" width="8" height="60" fill="#4285f4" rx="4"/>
+                        <rect x="15" y="10" width="8" height="40" fill="#87ceeb" rx="4"/>
+                        
+                        <!-- 数据点 -->
+                        <circle cx="4" cy="20" r="2" fill="white"/>
+                        <circle cx="19" cy="35" r="2" fill="white"/>
+                    </g>
+                    
+                    <!-- 对话框 -->
+                    <g transform="translate(280, 50)">
+                        <!-- 灰色对话框 -->
+                        <rect x="0" y="0" width="80" height="30" rx="15" fill="#6c757d"/>
+                        <polygon points="10,30 20,40 30,30" fill="#6c757d"/>
+                        
+                        <!-- 对话框内容点 -->
+                        <circle cx="15" cy="15" r="2" fill="white"/>
+                        <circle cx="25" cy="15" r="2" fill="white"/>
+                        <circle cx="35" cy="15" r="2" fill="white"/>
+                        <circle cx="45" cy="15" r="2" fill="white"/>
+                    </g>
+                    
+                    <!-- 白色对话框 -->
+                    <g transform="translate(180, 20)">
+                        <rect x="0" y="0" width="90" height="35" rx="17" fill="white" stroke="#e0e0e0" stroke-width="2"/>
+                        <polygon points="75,35 85,45 95,35" fill="white" stroke="#e0e0e0" stroke-width="2"/>
+                        
+                        <!-- 对话框内容 -->
+                        <circle cx="20" cy="17" r="2" fill="#4285f4"/>
+                        <circle cx="35" cy="17" r="2" fill="#4285f4"/>
+                        <circle cx="50" cy="17" r="2" fill="#4285f4"/>
+                        <circle cx="65" cy="17" r="2" fill="#4285f4"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        
+        <!-- 右侧上传区域 -->
+        <div class="right-section">
+            <div class="upload-container">
+                <h3>Upload file</h3>
+                
+                <!-- 文件上传区域 -->
+                <div class="upload-zone" id="uploadZone">
+                    <div class="upload-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2Z" fill="#4285f4"/>
+                            <path d="M14 2V8H20" fill="white"/>
+                            <path d="M12 11L8 15H10V19H14V15H16L12 11Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <p class="upload-text">Drag your resume file or image to this area, or click on this area to select the appropriate file to upload</p>
+                    <input type="file" id="fileInput" accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png,.gif,.webp,.bmp,.svg" hidden>
+                </div>
+                
+                <!-- 文件信息显示 -->
+                <div class="file-info" id="fileInfo" style="display: none;">
+                    <div class="file-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2Z" fill="#4285f4"/>
+                            <path d="M14 2V8H20" fill="white"/>
+                        </svg>
+                        <div class="file-details">
+                            <span class="file-name" id="fileName"></span>
+                            <span class="file-size" id="fileSize"></span>
+                        </div>
+                        <button class="remove-file" id="removeFile" onclick="removeFile()">×</button>
+                    </div>
+                </div>
+                
+                <!-- 按钮区域 -->
+                <div class="button-group">
+                    <button class="btn btn-secondary" id="lastStepBtn">Last step</button>
+                    <button class="btn btn-primary" id="finishBtn">Finish</button>
+                </div>
+                
+                <!-- 进度指示器 -->
+                <div class="progress-indicator">
+                    <div class="step completed"></div>
+                    <div class="step-line completed"></div>
+                    <div class="step completed"></div>
+                    <div class="step-line completed"></div>
+                    <div class="step active"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
